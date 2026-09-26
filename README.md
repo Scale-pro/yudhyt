@@ -44,10 +44,35 @@ npm run images    # regenera public/img a partir de assets/photos
   (ex. `https://drayudyd.com.br`) para canonical, Open Graph e sitemap. Sem isso, o build usa o domínio
   de produção da Vercel automaticamente.
 
-## Deploy
+## Subir para o GitHub
 
-O projeto `yudhyt` na Vercel está ligado a este repositório: cada push gera um deploy
-(`npm run build` → `dist/`). Produção: https://yudhyt.vercel.app
+1. Crie um repositório vazio no GitHub (ex. `yudhyt`), **sem** README/license iniciais.
+2. Na raiz do projeto:
+
+```bash
+git remote add origin https://github.com/SEU_USUARIO/yudhyt.git
+git branch -M main
+git push -u origin main
+```
+
+`node_modules/`, `dist/` e `.cache/` ficam fora do versionamento (`.gitignore`).
+`public/img/` **é** versionado de propósito, para o deploy na Vercel não precisar do `sharp`.
+`.gitattributes` mantém finais de linha LF em qualquer sistema operacional.
+
+## Deploy na Vercel
+
+1. Em [vercel.com/new](https://vercel.com/new), importe o repositório do GitHub.
+2. Nenhuma configuração manual: o `vercel.json` já define build `npm run build`, saída em
+   `dist/`, `cleanUrls`, headers de segurança e cache imutável (1 ano) para `/fonts` e `/img`.
+3. Cada push na `main` gera um deploy de produção; PRs geram preview.
 
 Depois de cada deploy de produção, o workflow **Lighthouse (produção)** mede a página no modo
-mobile (3 execuções) e publica as notas no resumo da execução em *Actions*.
+mobile (3 execuções) e publica as notas no resumo da execução em *Actions*. Sem configuração,
+ele usa `https://yudhyt.vercel.app`; ao apontar um domínio próprio, defina a variável
+`SITE_URL` no repositório (Settings → Secrets and variables → Actions → Variables).
+
+## Antes de ir ao ar
+
+- Confirme o número real do WhatsApp em `site.config.json` (o atual é um placeholder).
+- Com domínio próprio, defina `siteUrl` em `site.config.json` (ou a variável `SITE_URL`
+  na Vercel) para canonical, Open Graph e sitemap corretos.

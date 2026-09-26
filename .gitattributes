@@ -1,0 +1,10 @@
+# Normaliza finais de linha: LF no repositório e no checkout
+* text=auto eol=lf
+
+# Binários — nunca normalizar
+*.avif binary
+*.webp binary
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.woff2 binary
