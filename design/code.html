@@ -1,0 +1,650 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="pt-BR" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Dra. Yudyd Martinez • Emagrecimento Clínico &amp; Saúde Metabólica | Mogi Guaçu e Mogi Mirim</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary": "#ffffff",
+            "primary": "#001428",
+            "surface-bright": "#f8f9ff",
+            "surface-container-highest": "#d3e4fe",
+            "inverse-surface": "#213145",
+            "error-container": "#ffdad6",
+            "background": "#f8f9ff",
+            "gold": {
+              DEFAULT: "#C5A059",
+              light: "#DFBE82",
+              dark: "#99732B",
+              warm: "#B8860B",
+              subtle: "#FBF7EE"
+            },
+            "on-surface-variant": "#43474d",
+            "surface-dim": "#cbdbf5",
+            "outline-variant": "#c3c6ce",
+            "on-error": "#ffffff",
+            "on-error-container": "#93000a",
+            "surface-variant": "#d3e4fe",
+            "surface-container-low": "#eff4ff",
+            "inverse-on-surface": "#eaf1ff",
+            "inverse-primary": "#b0c9e8",
+            "surface-tint": "#49607c",
+            "primary-container": "#0f2942",
+            "error": "#ba1a1a",
+            "surface-container-high": "#dce9ff",
+            "on-background": "#0b1c30",
+            "on-primary-container": "#7991af",
+            "surface-container-lowest": "#ffffff",
+            "surface": "#f8f9ff",
+            "outline": "#74777e",
+            "surface-container": "#e5eeff",
+            "on-primary": "#ffffff",
+            "on-surface": "#0b1c30"
+          },
+          fontFamily: {
+            "sans": ["Plus Jakarta Sans", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined.fill {
+      font-variation-settings: 'FILL' 1;
+    }
+    @keyframes pulse-subtle {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+    .animate-pulse-subtle {
+      animation: pulse-subtle 3s infinite ease-in-out;
+    }
+    .shadow-soft {
+      box-shadow: 0 4px 20px -2px rgba(15, 41, 66, 0.05);
+    }
+    .shadow-hover {
+      box-shadow: 0 12px 32px -4px rgba(15, 41, 66, 0.08);
+    }
+    .gold-gradient-badge {
+      background: linear-gradient(135deg, #DFBE82 0%, #C5A059 50%, #A67C2E 100%);
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #B8860B 0%, #C5A059 50%, #99732B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-sans antialiased overflow-x-hidden selection:bg-amber-100 selection:text-amber-900">
+<!-- TOP BAR DISCRETA -->
+<aside class="bg-primary text-on-primary py-2 px-4 text-center text-xs tracking-wide"><div class="max-w-6xl mx-auto flex items-center justify-center gap-2 flex-wrap font-medium">
+<span class="inline-flex items-center gap-1.5 text-[#DFBE82]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#DFBE82] animate-ping"></span>
+Online para Todo o Brasil
+</span>
+<span class="text-white/40">•</span>
+<span class="text-slate-300">Presencial com Hora Marcada (Mogi Guaçu &amp; Mogi Mirim)</span>
+<span class="text-white/40">•</span>
+<span class="text-slate-300">Consultas Particulares com Recibo &amp; Convênios</span>
+</div></aside>
+<!-- NAVBAR LIMPA -->
+<header class="bg-surface/90 backdrop-blur-md sticky top-0 z-40 border-b border-slate-200/60">
+<div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+<a class="flex items-center gap-3" href="#">
+<div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-300/40 flex items-center justify-center text-[#B8860B]">
+<span class="material-symbols-outlined text-2xl" data-icon="health_and_safety">health_and_safety</span>
+</div>
+<div>
+<span class="block font-bold text-primary text-lg tracking-tight leading-none">Dra. Yudyd Martinez</span>
+<span class="text-[11px] font-semibold text-[#B8860B] tracking-widest uppercase mt-0.5 block">CRM-SP 235037 • Saúde Metabólica</span>
+</div>
+</a>
+<!-- Links Desktop Rápidos -->
+<nav class="hidden md:flex items-center gap-8 text-sm font-medium text-on-surface-variant">
+<a class="hover:text-[#B8860B] transition-colors" href="#sintomas">Sintomas</a>
+<a class="hover:text-[#B8860B] transition-colors" href="#casos">Resultados</a>
+<a class="hover:text-[#B8860B] transition-colors" href="#metodo">Método</a>
+<a class="hover:text-[#B8860B] transition-colors" href="#sobre">Sobre</a>
+<a class="hover:text-[#B8860B] transition-colors" href="#locais">Locais</a>
+</nav>
+<a class="gold-gradient-badge text-primary hover:brightness-105 px-5 py-2.5 rounded-full text-sm font-bold flex items-center gap-2 shadow-md border border-amber-200/80 transition-all hover:scale-105 active:scale-95" href="https://wa.me/5519999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Yudyd" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-lg fill text-primary" data-icon="chat">chat</span><span class="tracking-tight text-primary">Agendar Consulta</span></a>
+</div>
+</header>
+<!-- HERO SECTION: AREJADA E ESCANEÁVEL -->
+<section class="py-12 md:py-20 lg:py-24">
+<div class="max-w-6xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+<!-- Conteúdo Textual Escaneável -->
+<div class="lg:col-span-7 space-y-6 order-2 lg:order-1">
+<div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-50 border border-amber-300/60 text-[#99732B] text-xs font-semibold tracking-wide shadow-sm">
+<span class="material-symbols-outlined text-sm text-[#C5A059]" data-icon="check_circle">check_circle</span>
+            Emagrecimento Clínico Sem Sofrimento
+          </div>
+<h1 class="text-3xl sm:text-4xl lg:text-[46px] font-bold text-primary tracking-tight leading-[1.18]">
+            Você não precisa de mais força de vontade. <span class="text-[#B8860B] underline decoration-[#C5A059]/40 decoration-2 underline-offset-4">Precisa destravar</span> seu metabolismo.
+          </h1>
+<p class="text-base sm:text-lg text-on-surface-variant font-normal leading-relaxed max-w-xl">
+            Investigação médica das causas biológicas que impedem seu corpo de queimar gordura. Sem passar fome ou carregar culpas injustas.
+          </p>
+<!-- Bullet Points Rápidos -->
+<ul class="space-y-2.5 pt-1 text-sm text-on-surface-variant">
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[#C5A059] text-lg" data-icon="done">done</span>
+<span class=""><strong>Consulta minuciosa de 50+ min:</strong> investigação hormonal e biológica completa.</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[#C5A059] text-lg" data-icon="done">done</span>
+<span class=""><strong>Tratamento da raiz do problema:</strong> insulina, tireoide lenta e esteatose hepática.</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[#C5A059] text-lg" data-icon="done">done</span>
+<span class=""><strong>Sem fórmulas perigosas:</strong> protocolos éticos e seguros validados pelo CFM.</span>
+</li>
+</ul>
+<!-- Bloco CTA Primário -->
+<div class="pt-3 space-y-2">
+<a class="animate-pulse-subtle inline-flex items-center justify-center gap-3 gold-gradient-badge text-primary hover:brightness-105 border border-amber-200 px-7 py-4 rounded-full font-bold text-base shadow-lg hover:scale-102 transition-all w-full sm:w-auto text-center" href="https://wa.me/5519999999999?text=Ol%C3%A1%20Dra.%20Yudyd%2C%20gostaria%20de%20destravar%20meu%20metabolismo" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-xl fill text-primary" data-icon="chat">chat</span><span class="text-primary">Quero Destravar Meu Metabolismo no WhatsApp</span></a>
+<p class="text-xs text-on-surface-variant/80 pl-2">Atendimento Online (Todo o Brasil) e Presencial com hora marcada • Vagas limitadas por semana</p>
+</div>
+</div>
+<!-- Foto da Médica & Selo Limpo -->
+<div class="lg:col-span-5 relative flex justify-center order-1 lg:order-2 mb-8 lg:mb-0">
+<div class="relative w-full max-w-sm">
+<div class="overflow-hidden rounded-3xl bg-surface-container border border-slate-200/80 shadow-soft">
+<img alt="Dra. Yudyd Martinez médica em seu consultório" class="w-full aspect-[4/5] object-cover object-top hover:scale-102 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1V08It1v61iTG1eDFLRhOugXk_VtpcNnVN8ZsBzJ8IpgtIQFTcgPgD_2QpV0_q2uIZ8kpa8s5_-uGyccuqjMIIOrb5R12UsRz8ouetw5SZQ3o0KPtf_AX-gD7NG6GeAVjO8oxphuM2tg4l_eseIy-vVxlYTfHJ-R14g5ufXLIQXt9IKs3OuL46Cp7L1j69GP1MbAJ17sA1r3T5cyNnaDaAlZfY2twUGI8kf36JLtXY9_QBS6mlYYZOTF2I">
+</div>
+<!-- Card Flutuante de Avaliação Doctoralia -->
+<div class="absolute -bottom-5 left-4 right-4 bg-white/95 backdrop-blur-sm p-3.5 rounded-2xl border border-slate-200 shadow-hover flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-xl bg-amber-50 border border-amber-200 text-[#C5A059] flex items-center justify-center">
+<span class="material-symbols-outlined text-xl fill" data-icon="verified">verified</span>
+</div>
+<div>
+<div class="flex items-center gap-1 text-amber-500 text-xs">
+<span class="material-symbols-outlined text-sm fill" data-icon="star">star</span>
+<span class="material-symbols-outlined text-sm fill" data-icon="star">star</span>
+<span class="material-symbols-outlined text-sm fill" data-icon="star">star</span>
+<span class="material-symbols-outlined text-sm fill" data-icon="star">star</span>
+<span class="material-symbols-outlined text-sm fill" data-icon="star">star</span>
+<span class="font-bold text-primary ml-1">5.0</span>
+</div>
+<span class="text-[11px] text-on-surface-variant font-medium">Avaliação Máxima no Doctoralia</span>
+</div>
+</div>
+<span class="text-[10px] font-bold text-[#99732B] bg-amber-50 px-2 py-1 rounded-md border border-amber-300">
+                CRM 235037
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAIXA DE NÚMEROS (STATS) MINIMALISTA -->
+<section class="border-y border-slate-200/70 bg-surface-container-low/50 py-7">
+<div class="max-w-6xl mx-auto px-6">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-x-0 sm:divide-x divide-slate-200/60">
+<div class="space-y-0.5">
+<div class="text-2xl sm:text-3xl font-bold text-primary">+1.200</div>
+<div class="text-xs text-on-surface-variant font-medium">Vidas Acompanhadas</div>
+</div>
+<div class="space-y-0.5">
+<div class="text-2xl sm:text-3xl font-bold text-[#B8860B]">5.0 ★</div>
+<div class="text-xs text-on-surface-variant font-medium">Nota no Doctoralia</div>
+</div>
+<div class="space-y-0.5">
+<div class="text-2xl sm:text-3xl font-bold text-primary">50+ min</div>
+<div class="text-xs text-on-surface-variant font-medium">Tempo de Consulta</div>
+</div>
+<div class="space-y-0.5"><div class="text-2xl sm:text-3xl font-bold text-primary">Brasil &amp; SP</div>
+<div class="text-xs text-on-surface-variant font-medium">Online &amp; Presencial com Hora Marcada</div></div>
+</div>
+</div>
+</section>
+<!-- 4 TRAVAMENTOS METABÓLICOS (DIAGNÓSTICO RÁPIDO) -->
+<section class="py-20" id="sintomas">
+<div class="max-w-6xl mx-auto px-6">
+<div class="text-center max-w-xl mx-auto mb-12 space-y-3">
+<span class="text-xs font-bold uppercase tracking-wider text-[#B8860B]">Autoavaliação Rápida</span>
+<h2 class="text-2xl sm:text-3xl font-bold text-primary tracking-tight">Você se identifica com algum destes travamentos?</h2>
+<p class="text-sm text-on-surface-variant">Sinais comuns de que seu corpo entrou em modo de estocagem por desbalanço hormonal.</p>
+</div>
+<!-- Grid 4 Cards Compactos -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-slate-200/80 shadow-soft hover:border-[#C5A059]/50 transition-colors">
+<div class="w-10 h-10 rounded-xl bg-amber-50 border border-amber-200/60 text-[#B8860B] flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-2xl" data-icon="scale">scale</span>
+</div>
+<h3 class="font-bold text-primary text-base mb-1.5">1. Peso Travado</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+            Você faz dietas, corta calorias e a balança não se mexe — sofrendo efeito sanfona contínuo.
+          </p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-slate-200/80 shadow-soft hover:border-[#C5A059]/50 transition-colors">
+<div class="w-10 h-10 rounded-xl bg-amber-50 border border-amber-200/60 text-[#B8860B] flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-2xl" data-icon="bolt">bolt</span>
+</div>
+<h3 class="font-bold text-primary text-base mb-1.5">2. Cansaço Crônico</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+            Acorda já sem energia, com lentidão e fadiga severa à tarde. Queda de cabelo e indisposição.
+          </p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-slate-200/80 shadow-soft hover:border-[#C5A059]/50 transition-colors">
+<div class="w-10 h-10 rounded-xl bg-amber-50 border border-amber-200/60 text-[#B8860B] flex items-center justify-center mb-4"><svg class="w-6 h-6 text-[#B8860B]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+<h3 class="font-bold text-primary text-base mb-1.5">3. Exames em Alerta</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+            Gordura no fígado (esteatose), glicemia elevada de pré-diabetes ou triglicérides altos.
+          </p>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-slate-200/80 shadow-soft hover:border-[#C5A059]/50 transition-colors">
+<div class="w-10 h-10 rounded-xl bg-amber-50 border border-amber-200/60 text-[#B8860B] flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-2xl" data-icon="restaurant">restaurant</span>
+</div>
+<h3 class="font-bold text-primary text-base mb-1.5">4. Compulsão por Doces</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+            Fome oculta pós-refeições e necessidade incontrolável de carboidratos ao final do dia.
+          </p>
+</div>
+</div>
+<!-- Banner de Triagem Rápida -->
+<div class="bg-surface-container-lowest border border-amber-200/80 rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-soft"><div class="flex items-center gap-3.5 text-center sm:text-left"><div class="w-11 h-11 rounded-xl bg-amber-50 border border-amber-200 text-[#B8860B] hidden sm:flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-2xl" data-icon="stethoscope">stethoscope</span></div><div><p class="text-sm text-on-surface font-bold">Identificou 1 ou mais sinais? Seu metabolismo precisa de conduta médica.</p><p class="text-xs text-on-surface-variant mt-0.5">Consulta minuciosa de 50+ min • Investigação hormonal sem passar fome nem dietas malucas.</p></div></div><div class="flex flex-col sm:items-end w-full sm:w-auto"><a class="whitespace-nowrap gold-gradient-badge text-primary hover:brightness-105 border border-amber-200/80 px-6 py-3 rounded-full text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shadow-md hover:scale-102 transition-all" href="https://wa.me/5519999999999?text=Ol%C3%A1%20Dra.%20Yudyd%2C%20me%20identifiquei%20com%20os%20travamentos%20metab%C3%B3licos%20e%20gostaria%20de%20agendar" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-base fill text-primary" data-icon="chat">chat</span><span class="text-primary">Agendar Triagem Metabólica no WhatsApp</span><span class="material-symbols-outlined text-sm text-primary" data-icon="arrow_forward">arrow_forward</span></a><span class="text-[10px] text-on-surface-variant/80 text-center sm:text-right mt-1">Atendimento Online (Brasil) ou Presencial c/ hora marcada</span></div></div>
+</div>
+</section>
+<!-- CASOS CLÍNICOS E ANTES/DEPOIS (CFM Nº 2.336/2023) -->
+<section class="py-20 bg-surface-container-low/40 border-t border-slate-200/70" id="casos">
+<div class="max-w-6xl mx-auto px-6">
+<div class="text-center max-w-xl mx-auto mb-12 space-y-2">
+<span class="text-xs font-bold uppercase tracking-wider text-[#B8860B]">Acompanhamento Real</span>
+<h2 class="text-2xl sm:text-3xl font-bold text-primary tracking-tight">Evolução Clínica de Pacientes</h2>
+<p class="text-sm text-on-surface-variant">Casos reais com tratamento de causa metabólica e adesão sustentável.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<!-- Caso 1 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden border border-slate-200/80 shadow-soft flex flex-col">
+<div class="aspect-square bg-slate-100 overflow-hidden">
+<img alt="Evolução Paciente M.S. 42 anos" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XlDq3GUwTfeVggZGDdBXVqMlDCPG9VG9o6mxhNE1UQfwkSwJy1R6B9RrAb56tM3_cWqvISvha7cOWi0p_YsIvdWDZ39EaPaVVf8NeQxRHD3FcQEttxWmVP3Zw17IQrbZiNlmSH36RWB16GGOHwisFBTCh0yTC9i64u5QT7jT1OPtUEZlGUC2Ihgk-aJDiVk8hGAAhHLdwc4psHHHFwRcIIk5YL5aLjmw399ks0mdLoKKujGnfyZVx9Rw">
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-bold text-primary text-sm">Paciente M.S., 42 anos</span>
+<span class="bg-amber-50 text-[#99732B] border border-amber-300 text-xs font-bold px-2 py-0.5 rounded-full shadow-sm">-18 kg</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+<strong>Quadro:</strong> Resistência insulínica e esteatose grau 2.<br>
+<strong>Desfecho:</strong> Remissão dos marcadores hepáticos e perda estável de gordura em 6 meses.
+              </p>
+</div>
+<span class="text-[11px] text-[#B8860B] font-medium flex items-center gap-1 pt-2 border-t border-slate-100">
+<span class="material-symbols-outlined text-xs fill" data-icon="verified">verified</span> Acompanhamento em Mogi Guaçu
+            </span>
+</div>
+</div>
+<!-- Caso 2 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden border border-slate-200/80 shadow-soft flex flex-col">
+<div class="aspect-square bg-slate-100 overflow-hidden">
+<img alt="Evolução Paciente R.F. 36 anos" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XbFY4rasZI2V_c5MLDFTosHe1xsd97TP25ReK97_UAQVF92zc60XLrzl02xF12CXI32KbLGZkZHu7BO4q3d3g_XQi6mq5UYUuoiLckfKzm3OVKHEWyOI-bVcHH80BSNPQFBI3mPVUpYpo_34uOK5hDBaYEiiO9LiYUueDJZLGLkfwfSoJk0IxPgyCU28gwLtnoBXlpYWBLQ4hhOYRXesKvNt6wazCa1M5X6Dfvyot5oUrJpFJIro4mnI8">
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-bold text-primary text-sm">Paciente R.F., 36 anos</span>
+<span class="bg-amber-50 text-[#99732B] border border-amber-300 text-xs font-bold px-2 py-0.5 rounded-full shadow-sm">-14 kg</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+<strong>Quadro:</strong> Hipotireoidismo subclínico e compulsão noturna.<br>
+<strong>Desfecho:</strong> Otimização tireoidiana, sono restaurado e saciedade equilibrada em 5 meses.
+              </p>
+</div>
+<span class="text-[11px] text-[#B8860B] font-medium flex items-center gap-1 pt-2 border-t border-slate-100">
+<span class="material-symbols-outlined text-xs fill" data-icon="verified">verified</span> Acompanhamento Presencial
+            </span>
+</div>
+</div>
+<!-- Caso 3 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden border border-slate-200/80 shadow-soft flex flex-col">
+<div class="aspect-square bg-slate-100 overflow-hidden">
+<img alt="Evolução Paciente C.A. 51 anos" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1UeJIYbnq_8Y-N-p6MUshYBmU5CJbJ-x9MaoaXVM5Fmw-phT-2IjU55nIRrV1G1ZBEoarRf5FfxcVgp8rvu5lGBdhNKxT-uHbhumFVqE2xTN_qeY_ate3fLsOQUlsxbdsHcq4tvSnA7bule1yBKuPh7OtGAmHlKGlLwJaWCbELE_AZB6AvoJb9llpzJGifZmvAUZ5bDwOXMqDpHgDH4IlhSD728v1pLrDMRXhonqxs9QbItifBtTPFITDY">
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-bold text-primary text-sm">Paciente C.A., 51 anos</span>
+<span class="bg-amber-50 text-[#99732B] border border-amber-300 text-xs font-bold px-2 py-0.5 rounded-full shadow-sm">-21 kg</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+<strong>Quadro:</strong> Efeito sanfona severo e hipertensão arterial.<br>
+<strong>Desfecho:</strong> Reprogramação metabólica, pressão normalizada e preservação muscular em 8 meses.
+              </p>
+</div>
+<span class="text-[11px] text-[#B8860B] font-medium flex items-center gap-1 pt-2 border-t border-slate-100">
+<span class="material-symbols-outlined text-xs fill" data-icon="verified">verified</span> Manutenção Anti-Sanfona
+            </span>
+</div>
+</div>
+</div>
+<!-- Nota CFM Discreta -->
+<p class="text-[11px] text-outline text-center max-w-2xl mx-auto leading-relaxed">
+<strong>Nota Informativa CFM (Resolução nº 2.336/2023):</strong> Casos apresentados com objetivo educativo. Cada metabolismo possui singularidades genéticas e laboratoriais; resultados podem variar.
+      </p><div class="mt-8 text-center flex flex-col items-center justify-center"><a class="inline-flex items-center justify-center gap-2.5 gold-gradient-badge text-primary hover:brightness-105 border border-amber-200 px-8 py-4 rounded-full font-bold text-sm sm:text-base shadow-lg hover:scale-102 transition-all text-center" href="https://wa.me/5519999999999?text=Ol%C3%A1%20Dra.%20Yudyd%2C%20vi%20os%20resultados%20cl%C3%ADnicos%20e%20quero%20iniciar%20minha%20reprograma%C3%A7%C3%A3o%20metab%C3%B3lica" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-xl fill text-primary" data-icon="chat">chat</span><span class="text-primary">Quero Ter Esses Mesmos Resultados Clínicos</span><span class="material-symbols-outlined text-base text-primary" data-icon="arrow_forward">arrow_forward</span></a><div class="flex items-center justify-center gap-3 mt-2 text-xs text-on-surface-variant"><span class="inline-flex items-center gap-1 text-[#B8860B] font-semibold"><span class="material-symbols-outlined text-sm fill" data-icon="verified">verified</span> Atendimento Online ou Presencial</span><span class="text-slate-300">•</span><span class="">Sem passar fome ou efeito sanfona</span></div></div>
+</div>
+</section>
+<!-- O MÉTODO EM 4 PASSOS OBJETIVOS -->
+<section class="py-20" id="metodo">
+<div class="max-w-6xl mx-auto px-6">
+<div class="text-center max-w-xl mx-auto mb-14 space-y-2">
+<span class="text-xs font-bold uppercase tracking-wider text-[#B8860B]">Protocolo Clínico</span>
+<h2 class="text-2xl sm:text-3xl font-bold text-primary tracking-tight">Como Destravamos Seu Metabolismo</h2>
+<p class="text-sm text-on-surface-variant">Passo a passo objetivo para emagrecer com saúde definitiva.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+<!-- Passo 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-slate-200/80 shadow-soft relative">
+<div class="w-8 h-8 rounded-lg bg-primary text-[#DFBE82] border border-[#C5A059]/40 text-xs font-bold flex items-center justify-center mb-4">
+            01
+          </div>
+<h3 class="font-bold text-primary text-base mb-1.5">Escuta Ativa (50+ min)</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+            Consulta sem pressa para entender sua rotina, tentativas anteriores, padrões de sono e estresse.
+          </p>
+</div>
+<!-- Passo 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-slate-200/80 shadow-soft relative">
+<div class="w-8 h-8 rounded-lg bg-primary text-[#DFBE82] border border-[#C5A059]/40 text-xs font-bold flex items-center justify-center mb-4">
+            02
+          </div>
+<h3 class="font-bold text-primary text-base mb-1.5">Check-up Profundo</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+            Avaliação detalhada de insulina basal, tireoide completa, inflamação e carências de micronutrientes.
+          </p>
+</div>
+<!-- Passo 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-slate-200/80 shadow-soft relative">
+<div class="w-8 h-8 rounded-lg bg-primary text-[#DFBE82] border border-[#C5A059]/40 text-xs font-bold flex items-center justify-center mb-4">
+            03
+          </div>
+<h3 class="font-bold text-primary text-base mb-1.5">Plano Personalizado</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+            Prescrição médica ética e sob medida (quando indicada), alinhada a ajustes práticos para seu estilo de vida.
+          </p>
+</div>
+<!-- Passo 4 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-slate-200/80 shadow-soft relative">
+<div class="w-8 h-8 rounded-lg bg-primary text-[#DFBE82] border border-[#C5A059]/40 text-xs font-bold flex items-center justify-center mb-4">
+            04
+          </div>
+<h3 class="font-bold text-primary text-base mb-1.5">Manutenção Anti-Sanfona</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+            Consolidação do ponto de equilíbrio metabólico (set point) para manter o peso sem sofrimento.
+          </p>
+</div>
+</div><div class="mt-10 text-center flex flex-col items-center justify-center space-y-2"><a class="inline-flex items-center justify-center gap-2.5 gold-gradient-badge text-primary hover:brightness-105 border border-amber-200/80 px-7 py-3.5 rounded-full font-bold text-sm sm:text-base shadow-md hover:scale-102 transition-all" href="https://wa.me/5519999999999?text=Ol%C3%A1%20Dra.%20Yudyd%2C%20quero%20passar%20pelo%20protocolo%20cl%C3%ADnico%20dos%204%20passos" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-lg fill text-primary" data-icon="chat">chat</span><span class="text-primary">Quero Passar pelo Protocolo dos 4 Passos no WhatsApp</span><span class="material-symbols-outlined text-sm text-primary" data-icon="arrow_forward">arrow_forward</span></a><p class="text-xs text-on-surface-variant">Plano individualizado baseado em exames e estilo de vida • Sem fórmulas perigosas</p></div>
+</div>
+</section>
+<!-- SOBRE A MÉDICA (DRA. YUDYD) -->
+<section class="py-20 bg-surface-container-low/40 border-t border-slate-200/70" id="sobre">
+<div class="max-w-5xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+<!-- Foto Profissional -->
+<div class="md:col-span-5">
+<div class="rounded-3xl overflow-hidden border border-slate-200 bg-white shadow-soft">
+<img alt="Dra. Yudyd Mauriem Martinez Perez" class="w-full aspect-[4/5] object-cover object-top" src="https://lh3.googleusercontent.com/aida/AEtjO1WsN-NG4JHM5-3RiERPIWyj1qAVf6B3TRn_eWulorczsglmZTzE0qZLPYWsZx6qCmT9HQmt__0ths2PazgQQostVwMemmMYhT8EWMVTkPkTqy3cVrCOOxjL9rK_R3ZmQCsPWQUcw-9s565f9909zgsFFEI0uXSOG71P_P22yJVCYF685_QvFfCqzf7DazCDDCX56xINsbK6lPpwBKCEa9ZY3l5DgiAWNSx-eDMkSsc2CuTl-5dsnduHkyw">
+<div class="p-3.5 bg-primary text-white flex items-center justify-between text-xs">
+<div>
+<span class="font-bold block text-[#DFBE82]">Dra. Yudyd Martinez</span>
+<span class="text-slate-300">CRM-SP 235037</span>
+</div>
+<span class="material-symbols-outlined text-[#DFBE82]" data-icon="stethoscope">stethoscope</span>
+</div>
+</div>
+</div>
+<!-- Propósito e Pilares -->
+<div class="md:col-span-7 space-y-6">
+<span class="text-xs font-bold uppercase tracking-wider text-[#B8860B]">Médica Responsável</span>
+<h2 class="text-2xl sm:text-3xl font-bold text-primary tracking-tight leading-snug">
+            "Consultas humanizadas de 50+ min sem julgamentos. Seu peso travado não é falta de disciplina, é desbalanço biológico."
+          </h2>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+            Com atendimento focado em emagrecimento clínico e metabolismo em Mogi Guaçu e Mogi Mirim, meu compromisso é identificar o que impede seu corpo de responder e desenhar um caminho seguro e sustentável.
+          </p>
+<!-- 3 Pilares em Chips -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+<div class="bg-surface-container-lowest p-3 rounded-xl border border-slate-200 text-center hover:border-amber-300 transition-colors">
+<span class="material-symbols-outlined text-[#C5A059] text-xl mb-1" data-icon="hearing">hearing</span>
+<span class="block text-xs font-bold text-primary">Escuta Ativa</span>
+<span class="text-[11px] text-on-surface-variant">Sem pressa ou julgamento</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-xl border border-slate-200 text-center hover:border-amber-300 transition-colors">
+<span class="material-symbols-outlined text-[#C5A059] text-xl mb-1" data-icon="biotechnology">biotechnology</span>
+<span class="block text-xs font-bold text-primary">Causa Raiz</span>
+<span class="text-[11px] text-on-surface-variant">Diagnóstico aprofundado</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-xl border border-slate-200 text-center hover:border-amber-300 transition-colors">
+<span class="material-symbols-outlined text-[#C5A059] text-xl mb-1" data-icon="shield">shield</span>
+<span class="block text-xs font-bold text-primary">Prescrição Ética</span>
+<span class="text-[11px] text-on-surface-variant">Protocolos seguros CFM</span>
+</div>
+</div><div class="pt-3 flex flex-col sm:flex-row items-start sm:items-center gap-3"><a class="inline-flex items-center gap-2 gold-gradient-badge text-primary hover:brightness-105 border border-amber-200/80 px-6 py-3 rounded-full text-xs sm:text-sm font-bold shadow-md hover:scale-102 transition-all" href="https://wa.me/5519999999999?text=Ol%C3%A1%20Dra.%20Yudyd%2C%20gostaria%20de%20conversar%20sobre%20meu%20metabolismo" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-base fill text-primary" data-icon="chat">chat</span><span class="text-primary">Conversar com a Dra. Yudyd via WhatsApp</span></a><span class="text-xs text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[#C5A059] text-sm fill" data-icon="check_circle">check_circle</span> Sem julgamentos • Foco na causa biológica real</span></div>
+</div>
+</div>
+</div>
+</section>
+<!-- PERGUNTAS FREQUENTES (FAQ COMPACTO) -->
+<section class="py-20" id="faq">
+<div class="max-w-3xl mx-auto px-6">
+<div class="text-center mb-12 space-y-2">
+<span class="text-xs font-bold uppercase tracking-wider text-[#B8860B]">Tire Suas Dúvidas</span>
+<h2 class="text-2xl sm:text-3xl font-bold text-primary tracking-tight">Perguntas Frequentes</h2>
+</div>
+<div class="space-y-3">
+<!-- Item 1 -->
+<details class="group bg-surface-container-lowest rounded-xl border border-slate-200 p-4 [&amp;_summary::-webkit-details-marker]:hidden shadow-sm" open="">
+<summary class="flex items-center justify-between cursor-pointer font-semibold text-sm text-primary">
+<span class="">O tratamento utiliza medicações modernas (como agonistas de GLP-1)?</span>
+<span class="material-symbols-outlined transition-transform duration-200 group-open:-rotate-180 text-[#C5A059] text-lg" data-icon="expand_more">expand_more</span>
+</summary>
+<p class="mt-2.5 text-xs text-on-surface-variant leading-relaxed">
+            Quando indicado por exames, utilizamos medicações aprovadas pelas agências de saúde para controle metabólico e saciedade. Não usamos fórmulas sem respaldo científico.
+          </p>
+</details>
+<!-- Item 2 -->
+<details class="group bg-surface-container-lowest rounded-xl border border-slate-200 p-4 [&amp;_summary::-webkit-details-marker]:hidden shadow-sm">
+<summary class="flex items-center justify-between cursor-pointer font-semibold text-sm text-primary">
+<span class="">A Dra. Yudyd atende convênios ou consultas particulares?</span>
+<span class="material-symbols-outlined transition-transform duration-200 group-open:-rotate-180 text-[#C5A059] text-lg" data-icon="expand_more">expand_more</span>
+</summary>
+<p class="mt-2.5 text-xs text-on-surface-variant leading-relaxed">
+            Atendemos convênios parceiros locais e também consultas particulares com fornecimento de laudo e recibo para você solicitar reembolso no seu plano de saúde.
+          </p>
+</details>
+<!-- Item 3 -->
+<details class="group bg-surface-container-lowest rounded-xl border border-slate-200 p-4 [&amp;_summary::-webkit-details-marker]:hidden shadow-sm">
+<summary class="flex items-center justify-between cursor-pointer font-semibold text-sm text-primary">
+<span class="">Quanto tempo dura a primeira consulta e como agendar?</span>
+<span class="material-symbols-outlined transition-transform duration-200 group-open:-rotate-180 text-[#C5A059] text-lg" data-icon="expand_more">expand_more</span>
+</summary>
+<p class="mt-2.5 text-xs text-on-surface-variant leading-relaxed">
+            A consulta dura de 50 a 60 minutos inteiramente dedicados ao seu histórico e exames. O agendamento é realizado de forma rápida diretamente pelo WhatsApp.
+          </p>
+</details>
+</div><div class="mt-8 bg-surface-container-lowest border border-slate-200/80 rounded-2xl p-5 sm:p-6 shadow-soft flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left"><div class="flex items-center gap-3.5"><div class="w-10 h-10 rounded-xl bg-amber-50 border border-amber-200/60 text-[#B8860B] flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-2xl" data-icon="support_agent">support_agent</span></div><div><h4 class="font-bold text-primary text-sm">Ainda com dúvidas se o tratamento serve para você?</h4><p class="text-xs text-on-surface-variant mt-0.5">Nossa equipe médica tira todas as dúvidas sobre exames, convênios e horários.</p></div></div><a class="whitespace-nowrap inline-flex items-center justify-center gap-2 gold-gradient-badge text-primary hover:brightness-105 border border-amber-200/80 px-5 py-3 rounded-full text-xs sm:text-sm font-bold shadow-md hover:scale-102 transition-all" href="https://wa.me/5519999999999?text=Ol%C3%A1%2C%20tenho%20d%C3%BAvidas%20sobre%20a%20consulta%20e%20gostaria%20de%20falar%20com%20a%20equipe" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-base fill text-primary" data-icon="chat">chat</span><span class="text-primary">Tirar Dúvidas com a Equipe no WhatsApp</span></a></div>
+</div>
+</section>
+<!-- POLOS DE ATENDIMENTO & CONVÊNIOS -->
+<section class="py-20 bg-surface-container-low/40 border-t border-slate-200/70" id="locais">
+<div class="max-w-5xl mx-auto px-6">
+<div class="text-center max-w-xl mx-auto mb-12 space-y-2"><span class="text-xs font-bold uppercase tracking-wider text-[#B8860B]">Modalidades de Consulta</span>
+<h2 class="text-2xl sm:text-3xl font-bold text-primary tracking-tight">Locais &amp; Formas de Atendimento</h2>
+<p class="text-sm text-on-surface-variant">Escolha a praticidade da telemedicina no conforto da sua casa ou o acolhimento presencial com hora marcada.</p></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8"><!-- Card 1: Atendimento Online (Telemedicina) - Destaque Principal -->
+<div class="bg-surface-container-lowest p-6 sm:p-7 rounded-2xl border-2 border-[#C5A059]/60 shadow-hover flex flex-col justify-between relative hover:border-[#C5A059] transition-colors order-1">
+<div class="absolute -top-3 right-6 gold-gradient-badge text-primary text-[10px] font-extrabold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-md flex items-center gap-1 border border-amber-200/80">
+<span class="material-symbols-outlined text-xs fill text-primary" data-icon="star">star</span>
+    Mais Buscado • Todo o Brasil
+  </div>
+<div class="space-y-4 pt-1">
+<div class="flex items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-200 text-[#B8860B] flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl" data-icon="videocam">videocam</span>
+</div>
+<div>
+<h3 class="font-bold text-primary text-lg flex items-center gap-2">
+            Atendimento Online
+          </h3>
+<span class="text-xs text-[#B8860B] font-semibold">Telemedicina Completa para Todo o Brasil</span>
+</div>
+</div>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+      A mesma minúcia investigativa, atenção e rigor clínico da consulta física, sem deslocamentos e no conforto da sua casa.
+    </p>
+<div class="space-y-2.5 pt-1 text-xs text-on-surface-variant">
+<div class="p-3.5 rounded-xl bg-amber-50/70 border border-amber-300/50 flex items-start gap-3">
+<span class="material-symbols-outlined text-[#B8860B] text-lg mt-0.5" data-icon="timer">timer</span>
+<div>
+<strong class="text-primary block font-semibold text-xs">Consulta Detalhada de 50+ minutos</strong>
+<span class="text-[11px] leading-relaxed text-on-surface-variant">Videochamada exclusiva e humanizada, anamnese aprofundada e investigação das causas hormonais.</span>
+</div>
+</div>
+<div class="p-3.5 rounded-xl bg-amber-50 text-amber-950 border border-amber-300/70 flex items-start gap-3">
+<span class="material-symbols-outlined text-[#C5A059] text-lg mt-0.5 fill" data-icon="verified">verified</span>
+<div>
+<strong class="block font-semibold text-xs text-amber-950">Receitas e Pedidos de Exames Digitais (ICP-Brasil)</strong>
+<span class="text-[11px] leading-relaxed text-amber-900/90">Documentação médica válida e aceita instantaneamente em farmácias e laboratórios de todo o país.</span>
+</div>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-low/60 flex items-start gap-3">
+<span class="material-symbols-outlined text-[#C5A059] text-base mt-0.5" data-icon="home">home</span>
+<div>
+<strong class="text-primary block font-medium">Conforto &amp; Praticidade</strong>
+<span class="text-[11px]">Atendimento pontual sem trânsito ou salas de espera.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-5 mt-4 border-t border-slate-100">
+<a class="inline-flex items-center justify-between w-full px-5 py-3.5 gold-gradient-badge text-primary hover:brightness-105 border border-amber-200 rounded-xl text-xs font-bold transition-all shadow-md group" href="https://wa.me/5519999999999?text=Ol%C3%A1%20Dra.%20Yudyd%2C%20gostaria%20de%20agendar%20uma%20consulta%20online%20(telemedicina)" rel="noopener noreferrer" target="_blank"><span class="flex items-center gap-2 text-primary"><span class="material-symbols-outlined text-base fill text-primary" data-icon="chat">chat</span><span class="text-primary">Agendar Consulta Online no WhatsApp</span></span><span class="material-symbols-outlined text-sm text-primary group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+</div>
+<!-- Card 2: Atendimento Presencial (Com Hora Marcada) -->
+<div class="bg-surface-container-lowest p-6 sm:p-7 rounded-2xl border border-slate-200/80 shadow-soft flex flex-col justify-between hover:border-amber-300 transition-colors order-2">
+<div class="space-y-4">
+<div class="flex items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-xl bg-slate-100 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl" data-icon="location_on">location_on</span>
+</div>
+<div>
+<h3 class="font-bold text-primary text-base">Atendimento Presencial</h3>
+<span class="text-[11px] text-[#B8860B] font-semibold">Exclusivamente com Hora Marcada</span>
+</div>
+</div>
+<span class="text-[11px] font-semibold text-on-surface-variant bg-surface-container-low px-2.5 py-1 rounded-full border border-slate-200 whitespace-nowrap">
+        Mogi Guaçu &amp; Mogi Mirim
+      </span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+      Consultórios confortáveis com atendimento individualizado e agendamento prévio para garantir pontualidade e tranquilidade.
+    </p>
+<div class="space-y-2 pt-1 text-xs text-on-surface-variant">
+<div class="p-3 rounded-xl bg-surface-container-low/60 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[#C5A059] text-base mt-0.5" data-icon="apartment">apartment</span>
+<div>
+<strong class="text-primary block font-medium">Polos em Mogi Guaçu (Hora Marcada)</strong>
+<span class="text-[11px]">Clínica da Cidade (Centro) e Ideal Saúde (Morro do Ouro).</span>
+</div>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-low/60 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[#C5A059] text-base mt-0.5" data-icon="home_health">home_health</span>
+<div>
+<strong class="text-primary block font-medium">Polo em Mogi Mirim (Hora Marcada)</strong>
+<span class="text-[11px]">Ideal Saúde (Jardim Áurea) com suporte para reembolso.</span>
+</div>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-low/40 border border-slate-100 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-outline text-base mt-0.5" data-icon="event_available">event_available</span>
+<div>
+<strong class="text-primary block font-medium">Agendamento Prévio Obrigatório</strong>
+<span class="text-[11px]">Horários reservados para manter consultas de 50+ min sem esperas.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-5 mt-4 border-t border-slate-100"><a class="inline-flex items-center justify-between w-full px-5 py-3.5 bg-amber-50 hover:bg-amber-50/70 text-[#99732B] border border-amber-300 rounded-xl text-xs font-bold transition-all shadow-sm group hover:border-[#C5A059]" href="https://wa.me/5519999999999?text=Ol%C3%A1%20Dra.%20Yudyd%2C%20gostaria%20de%20reservar%20um%20hor%C3%A1rio%20presencial%20(Mogi%20Gua%C3%A7u%20ou%20Mogi%20Mirim)" rel="noopener noreferrer" target="_blank"><span class="flex items-center gap-2"><span class="material-symbols-outlined text-base fill text-[#C5A059]" data-icon="chat">chat</span><span class="text-primary">Reservar Horário Presencial (Mogi Guaçu / Mogi Mirim)</span></span><span class="material-symbols-outlined text-sm text-[#C5A059] group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span></a></div>
+</div></div>
+<!-- Convênios em Badges Limpos -->
+<div class="text-center pt-2">
+<span class="text-[11px] font-semibold text-outline uppercase tracking-wider block mb-3">
+          Convênios e planos parceiros aceitos nas clínicas
+        </span>
+<div class="flex flex-wrap items-center justify-center gap-2 text-xs font-medium text-on-surface-variant">
+<span class="px-3 py-1 bg-surface-container-lowest border border-slate-200 rounded-lg">Doctor Prime</span>
+<span class="px-3 py-1 bg-surface-container-lowest border border-slate-200 rounded-lg">Siemaco</span>
+<span class="px-3 py-1 bg-surface-container-lowest border border-slate-200 rounded-lg">Avus</span>
+<span class="px-3 py-1 bg-surface-container-lowest border border-slate-200 rounded-lg">Mais Fácil Saúde</span>
+<span class="px-3 py-1 bg-surface-container-lowest border border-slate-200 rounded-lg">Única Saúde</span>
+<span class="px-3 py-1 bg-amber-50 text-[#99732B] border border-amber-300 rounded-lg font-semibold shadow-sm">Particular c/ Reembolso</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA FINAL DE IMPACTO -->
+<section class="py-16 bg-primary text-white text-center">
+<div class="max-w-2xl mx-auto px-6 space-y-5">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Sua saúde metabólica não precisa esperar.</h2>
+<p class="text-sm text-surface-dim leading-relaxed max-w-lg mx-auto">
+        Dê o primeiro passo com um plano médico investigativo que trata a causa real do ganho de peso.
+      </p>
+<div>
+<a class="inline-flex items-center gap-2.5 gold-gradient-badge text-primary hover:brightness-105 border border-amber-200 px-8 py-4 rounded-full text-sm font-bold shadow-lg transition-transform hover:scale-105 active:scale-95" href="https://wa.me/5519999999999?text=Ol%C3%A1%20Dra.%20Yudyd%2C%20quero%20destravar%20meu%20metabolismo" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-lg fill text-primary" data-icon="chat">chat</span><span class="text-primary">Quero Destravar Meu Metabolismo no WhatsApp</span></a>
+<p class="text-[11px] text-white/50 mt-2.5">Online para Todo o Brasil • Presencial com hora marcada em Mogi Guaçu e Mogi Mirim</p>
+</div>
+</div>
+</section>
+<!-- FOOTER MINIMALISTA -->
+<footer class="bg-[#000d1a] text-white/60 py-8 border-t border-white/5 text-xs">
+<div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div>
+<span class="font-bold text-white block">Dra. Yudyd Mauriem Martinez Perez</span>
+<span class="">CRM-SP 235037 • Saúde Metabólica &amp; Emagrecimento Clínico</span>
+</div>
+<div class="flex items-center gap-4 text-[11px]">
+<span class="">Online (Brasil) &amp; Presencial com Hora Marcada (Mogi Guaçu &amp; Mogi Mirim)</span>
+<span class="">•</span>
+<a class="hover:text-white transition-colors" href="https://portal.cfm.org.br/" rel="noopener noreferrer" target="_blank">Resolução CFM nº 2.336/2023</a>
+</div>
+</div>
+</footer>
+<!-- PERSISTENT FLOATING WHATSAPP BUTTON -->
+<div class="fixed bottom-5 right-5 z-50 flex items-center gap-2.5">
+<div class="hidden sm:flex bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-xl shadow-hover border border-slate-200 items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-[#C5A059] animate-ping"></span>
+<span class="text-xs font-semibold text-primary">Agende no WhatsApp</span>
+</div>
+<a aria-label="Fale conosco no WhatsApp" class="w-13 h-13 sm:w-14 sm:h-14 p-3 rounded-full gold-gradient-badge text-primary hover:brightness-105 border-2 border-white/60 flex items-center justify-center shadow-lg transition-transform duration-200 hover:scale-110 active:scale-95" href="https://wa.me/5519999999999?text=Ol%C3%A1%20Dra.%20Yudyd%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20agendamento" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-2xl fill text-primary" data-icon="chat">chat</span></a>
+</div>
+
+
+</body></html>

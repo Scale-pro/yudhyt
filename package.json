@@ -1,0 +1,19 @@
+{
+  "name": "yudhyt",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page da Dra. Yudyd Martinez — Emagrecimento Clínico & Saúde Metabólica",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "images": "node scripts/images.mjs",
+    "preview": "npx --yes serve dist -l 4173"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.4",
+    "tailwindcss": "^3.4.19"
+  }
+}
