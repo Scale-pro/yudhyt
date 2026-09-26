@@ -39,8 +39,9 @@ npm run images    # regenera public/img a partir de assets/photos
   adicionar outras fotos, use os nomes abaixo e rode `npm run images`:
   - `dra-yudyd-hero` — foto principal da médica (retrato vertical 4:5, mín. 768×960)
   - `dra-yudyd-sobre` — foto opcional para a seção "Sobre" (retrato vertical 4:5, mín. 768×960)
-  - `caso-1`, `caso-2`, `caso-3` — evolução das pacientes (quadradas, mín. 720×720;
-    antes/depois só com autorização expressa da paciente, conforme a Resolução CFM nº 2.336/2023)
+  - `caso-1`, `caso-2`, `caso-3` — uma foto por caso (quadradas, mín. 720×720). Publique imagens
+    identificáveis de pacientes somente com autorização expressa e documentada, respeitando a
+    Resolução CFM nº 2.336/2023 e a LGPD; não exponha dados pessoais nos nomes dos arquivos.
 - **Domínio próprio**: ao configurar um domínio na Vercel, defina `siteUrl` em `site.config.json`
   (ex. `https://drayudyd.com.br`) para canonical, Open Graph e sitemap. Sem isso, o build usa o domínio
   de produção da Vercel automaticamente.
