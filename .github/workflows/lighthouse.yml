@@ -1,0 +1,59 @@
+name: Lighthouse (produção)
+
+# Mede a URL de produção (mobile) depois de cada deploy de produção da Vercel,
+# ou manualmente em Actions → "Lighthouse (produção)" → Run workflow.
+on:
+  deployment_status:
+  workflow_dispatch:
+
+jobs:
+  lighthouse:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'Production')
+    runs-on: ubuntu-latest
+    env:
+      SITE_URL: ${{ vars.SITE_URL || 'https://yudhyt.vercel.app' }}
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Rodar Lighthouse mobile (3x)
+        run: |
+          for i in 1 2 3; do
+            npx --yes lighthouse@13 "$SITE_URL/" \
+              --form-factor=mobile \
+              --only-categories=performance,accessibility,best-practices,seo \
+              --chrome-flags="--headless=new --no-sandbox" \
+              --output=json --output=html --output-path="./lh-$i" --quiet
+          done
+
+      - name: Resumo
+        run: |
+          node --input-type=module -e '
+          import fs from "node:fs";
+          const runs = [1, 2, 3].map((i) => JSON.parse(fs.readFileSync(`lh-${i}.report.json`, "utf8")));
+          const median = (xs) => xs.sort((a, b) => a - b)[Math.floor(xs.length / 2)];
+          const cats = ["performance", "accessibility", "best-practices", "seo"];
+          const goal = { performance: 98, accessibility: 98, "best-practices": 100, seo: 100 };
+          const metrics = ["first-contentful-paint", "largest-contentful-paint", "speed-index", "total-blocking-time", "cumulative-layout-shift"];
+          let md = `## Lighthouse mobile — ${runs[0].finalDisplayedUrl}\n\n| Categoria | Execuções | Mediana | Meta |\n|---|---|---|---|\n`;
+          for (const c of cats) {
+            const s = runs.map((r) => Math.round(r.categories[c].score * 100));
+            const m = median([...s]);
+            md += `| ${c} | ${s.join(" / ")} | **${m}** | ${goal[c]} |\n`;
+            if (m < goal[c]) console.log(`::warning::${c} = ${m} (meta ${goal[c]})`);
+          }
+          md += `\n| Métrica | Execuções |\n|---|---|\n`;
+          for (const id of metrics) md += `| ${id} | ${runs.map((r) => r.audits[id].displayValue).join(" / ")} |\n`;
+          const failing = Object.values(runs[0].audits).filter((a) => a.score !== null && a.score < 0.9 && ["binary", "numeric", "metricSavings"].includes(a.scoreDisplayMode));
+          if (failing.length) md += `\nAuditorias abaixo de 90 (1ª execução): ${failing.map((a) => a.id).join(", ")}\n`;
+          fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, md);
+          console.log(md);
+          '
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-report
+          path: lh-*.report.html

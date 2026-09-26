@@ -13,7 +13,7 @@ src/index.html        HTML da página (classes Tailwind + placeholders %WA% e %S
 src/styles.css        @font-face, Tailwind e componentes
 src/icons.svg         Sprite de ícones Material Symbols (inline no HTML)
 public/               Arquivos servidos como estão (fontes, imagens, favicon)
-assets/photos/        Fotos originais (fonte para gerar public/img)
+assets/photos/        Fotos originais (fonte para gerar public/img) — hoje vazio
 scripts/build.mjs     Build: Tailwind purgado + CSS/ícones inline + cache-busting → dist/
 scripts/images.mjs    Gera AVIF/WebP responsivos e og.jpg a partir de assets/photos
 site.config.json      Número do WhatsApp e URL do site
@@ -33,8 +33,13 @@ npm run images    # regenera public/img a partir de assets/photos
 
 - **WhatsApp**: troque `whatsapp` em `site.config.json` (formato internacional, só dígitos — ex. `5519987654321`).
   Todos os botões usam esse número.
-- **Fotos**: substitua os arquivos em `assets/photos/` mantendo os nomes
-  (`dra-yudyd-hero`, `dra-yudyd-sobre`, `caso-1`, `caso-2`, `caso-3`; jpg/png/webp) e rode `npm run images`.
+- **Fotos**: as imagens do Stitch não são públicas (as URLs retornam 403), então o site está com
+  **artes provisórias** na identidade da marca. Para usar as fotos reais, coloque os arquivos em
+  `assets/photos/` com estes nomes (jpg/png/webp) e rode `npm run images`:
+  - `dra-yudyd-hero` — foto principal da médica (retrato vertical 4:5, mín. 768×960)
+  - `dra-yudyd-sobre` — foto da seção "Sobre" (retrato vertical 4:5, mín. 768×960)
+  - `caso-1`, `caso-2`, `caso-3` — evolução das pacientes (quadradas, mín. 720×720;
+    antes/depois só com autorização expressa da paciente, conforme a Resolução CFM nº 2.336/2023)
 - **Domínio próprio**: ao configurar um domínio na Vercel, defina `siteUrl` em `site.config.json`
   (ex. `https://drayudyd.com.br`) para canonical, Open Graph e sitemap. Sem isso, o build usa o domínio
   de produção da Vercel automaticamente.
@@ -42,4 +47,7 @@ npm run images    # regenera public/img a partir de assets/photos
 ## Deploy
 
 O projeto `yudhyt` na Vercel está ligado a este repositório: cada push gera um deploy
-(`npm run build` → `dist/`).
+(`npm run build` → `dist/`). Produção: https://yudhyt.vercel.app
+
+Depois de cada deploy de produção, o workflow **Lighthouse (produção)** mede a página no modo
+mobile (3 execuções) e publica as notas no resumo da execução em *Actions*.
