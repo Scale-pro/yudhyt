@@ -5,6 +5,7 @@
   "description": "Landing page da Dra. Yudyd Martinez — Emagrecimento Clínico & Saúde Metabólica",
   "type": "module",
   "scripts": {
+    "dev": "node scripts/dev.mjs",
     "build": "node scripts/build.mjs",
     "images": "node scripts/images.mjs",
     "preview": "npx --yes serve dist -l 4173"
