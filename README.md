@@ -33,11 +33,12 @@ npm run images    # regenera public/img a partir de assets/photos
 
 - **WhatsApp**: troque `whatsapp` em `site.config.json` (formato internacional, só dígitos — ex. `5519987654321`).
   Todos os botões usam esse número.
-- **Fotos**: as imagens do Stitch não são públicas (as URLs retornam 403), então o site está com
-  **artes provisórias** na identidade da marca. Para usar as fotos reais, coloque os arquivos em
-  `assets/photos/` com estes nomes (jpg/png/webp) e rode `npm run images`:
+- **Fotos**: a foto profissional principal fica em `assets/photos/dra-yudyd-hero.jpeg`; o script
+  `npm run images` gera versões AVIF/WebP responsivas para o hero, a seção "Sobre" e a imagem Open Graph.
+  Se não houver uma foto separada `dra-yudyd-sobre`, a foto principal é reutilizada nessa seção. Para
+  adicionar outras fotos, use os nomes abaixo e rode `npm run images`:
   - `dra-yudyd-hero` — foto principal da médica (retrato vertical 4:5, mín. 768×960)
-  - `dra-yudyd-sobre` — foto da seção "Sobre" (retrato vertical 4:5, mín. 768×960)
+  - `dra-yudyd-sobre` — foto opcional para a seção "Sobre" (retrato vertical 4:5, mín. 768×960)
   - `caso-1`, `caso-2`, `caso-3` — evolução das pacientes (quadradas, mín. 720×720;
     antes/depois só com autorização expressa da paciente, conforme a Resolução CFM nº 2.336/2023)
 - **Domínio próprio**: ao configurar um domínio na Vercel, defina `siteUrl` em `site.config.json`

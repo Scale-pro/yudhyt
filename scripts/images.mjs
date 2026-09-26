@@ -53,7 +53,7 @@ fs.mkdirSync(outDir, { recursive: true });
 
 for (const job of jobs) {
   const { name, widths, ratio, position } = job;
-  const photo = findSource(name);
+  const photo = findSource(name) ?? (name === 'dra-yudyd-sobre' ? findSource('dra-yudyd-hero') : null);
   const input = photo ?? (await sharp(placeholder(job)).png().toBuffer());
   for (const width of widths) {
     const height = Math.round(width / ratio);
