@@ -1,5 +1,6 @@
-// Build estático: compila o Tailwind (com purge), injeta CSS + sprite de ícones
-// inline no HTML, aplica cache-busting nos assets e gera robots/sitemap em dist/.
+// Build estático: compila o Tailwind (com purge), embute a fonte crítica em
+// base64 no CSS, injeta CSS + sprite de ícones inline no HTML, minifica o
+// HTML, aplica cache-busting nos assets e gera robots/sitemap em dist/.
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import fs from 'node:fs';
@@ -27,7 +28,15 @@ execFileSync(
   ['-i', 'src/styles.css', '-o', cssFile, '--minify'],
   { cwd: root, stdio: 'inherit' },
 );
-const css = fs.readFileSync(cssFile, 'utf8');
+
+// Fonte crítica embutida como data URI: elimina uma requisição bloqueante e
+// o FOUT — o texto pinta direto na fonte final no primeiro render.
+const FONT_URL = '/fonts/plus-jakarta-sans-latin.woff2';
+const fontB64 = fs.readFileSync(path.join(root, 'public', FONT_URL.slice(1))).toString('base64');
+let css = fs.readFileSync(cssFile, 'utf8');
+if (!css.includes(`url(${FONT_URL})`)) throw new Error('Fonte crítica não encontrada no CSS para embutir');
+css = css.replace(`url(${FONT_URL})`, `url(data:font/woff2;base64,${fontB64})`);
+
 const icons = fs.readFileSync(path.join(root, 'src', 'icons.svg'), 'utf8').trim();
 
 const hashes = new Map();
@@ -40,6 +49,24 @@ const assetHash = (urlPath) => {
   return hashes.get(urlPath);
 };
 
+// Minificação conservadora: remove comentários e indentação preservando
+// exatamente a semântica de espaços renderizáveis (inline) e o conteúdo
+// integral de <script>, <style>, <pre> e <textarea>.
+const minifyHtml = (input) => {
+  const blocks = [];
+  const guarded = input.replace(/<(script|style|pre|textarea)\b[^>]*>[\s\S]*?<\/\1>/gi, (m) => {
+    blocks.push(m);
+    return `\u0000${blocks.length - 1}\u0000`;
+  });
+  return guarded
+    .replace(/<!--(?!\[if)[\s\S]*?-->/g, '') // comentários HTML
+    .replace(/[ \t]+$/gm, '') // espaços à direita das linhas
+    .replace(/^[ \t]+/gm, '') // indentação (irrelevante na renderização)
+    .replace(/>\s+</g, '> <') // colapsa espaços entre tags mantendo 1 espaço
+    .replace(/\n{2,}/g, '\n') // linhas vazias
+    .replace(/\u0000(\d+)\u0000/g, (_, i) => blocks[Number(i)]);
+};
+
 let html = fs
   .readFileSync(path.join(root, 'src', 'index.html'), 'utf8')
   .replace('<!-- @icons -->', () => icons)
@@ -47,7 +74,12 @@ let html = fs
   .replaceAll('%SITE_URL%', siteUrl)
   .replaceAll('%WA%', config.whatsapp);
 
-html = html.replace(/\/(?:fonts|img)\/[\w.-]+\.(?:woff2|avif|webp|jpe?g|png|svg)/g, (m) => `${m}?v=${assetHash(m)}`);
+html = html.replace(
+  /\/(?:fonts|img)\/[\w.-]+\.(?:woff2|avif|webp|jpe?g|png|svg)|\/favicon\.svg/g,
+  (m) => `${m}?v=${assetHash(m)}`,
+);
+
+html = minifyHtml(html);
 
 fs.writeFileSync(path.join(dist, 'index.html'), html);
 fs.writeFileSync(path.join(dist, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${siteUrl}/sitemap.xml\n`);
@@ -57,4 +89,6 @@ fs.writeFileSync(
 );
 
 const kb = (n) => `${(n / 1024).toFixed(1)} KiB`;
-console.log(`✓ dist/index.html ${kb(Buffer.byteLength(html))} (CSS inline ${kb(css.length)}) — siteUrl ${siteUrl}`);
+console.log(
+  `✓ dist/index.html ${kb(Buffer.byteLength(html))} (CSS+fonte inline ${kb(css.length)}) — siteUrl ${siteUrl}`,
+);

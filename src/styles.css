@@ -23,6 +23,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  /* Pula a renderização de seções fora da viewport: primeiro paint mais rápido */
+  .cv-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 720px;
+  }
+}
+
 @layer components {
   .ic {
     display: inline-block;
