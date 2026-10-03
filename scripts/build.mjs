@@ -1,6 +1,6 @@
-// Build estático: compila o Tailwind (com purge), embute a fonte crítica em
-// base64 no CSS, injeta CSS + sprite de ícones inline no HTML, minifica o
-// HTML, aplica cache-busting nos assets e gera robots/sitemap em dist/.
+// Build estático: compila o Tailwind (com purge), injeta CSS + sprite de
+// ícones inline no HTML, minifica o HTML, aplica cache-busting nos assets e
+// gera robots/sitemap em dist/.
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import fs from 'node:fs';
@@ -29,14 +29,7 @@ execFileSync(
   { cwd: root, stdio: 'inherit' },
 );
 
-// Fonte crítica embutida como data URI: elimina uma requisição bloqueante e
-// o FOUT — o texto pinta direto na fonte final no primeiro render.
-const FONT_URL = '/fonts/plus-jakarta-sans-latin.woff2';
-const fontB64 = fs.readFileSync(path.join(root, 'public', FONT_URL.slice(1))).toString('base64');
-let css = fs.readFileSync(cssFile, 'utf8');
-if (!css.includes(`url(${FONT_URL})`)) throw new Error('Fonte crítica não encontrada no CSS para embutir');
-css = css.replace(`url(${FONT_URL})`, `url(data:font/woff2;base64,${fontB64})`);
-
+const css = fs.readFileSync(cssFile, 'utf8');
 const icons = fs.readFileSync(path.join(root, 'src', 'icons.svg'), 'utf8').trim();
 
 const hashes = new Map();
@@ -75,7 +68,7 @@ let html = fs
   .replaceAll('%WA%', config.whatsapp);
 
 html = html.replace(
-  /\/(?:fonts|img)\/[\w.-]+\.(?:woff2|avif|webp|jpe?g|png|svg)|\/favicon\.svg/g,
+  /\/(?:fonts|img|js)\/[\w.-]+\.(?:woff2|avif|webp|jpe?g|png|svg|js)|\/favicon\.svg/g,
   (m) => `${m}?v=${assetHash(m)}`,
 );
 
@@ -90,5 +83,5 @@ fs.writeFileSync(
 
 const kb = (n) => `${(n / 1024).toFixed(1)} KiB`;
 console.log(
-  `✓ dist/index.html ${kb(Buffer.byteLength(html))} (CSS+fonte inline ${kb(css.length)}) — siteUrl ${siteUrl}`,
+  `✓ dist/index.html ${kb(Buffer.byteLength(html))} (CSS inline ${kb(css.length)}) — siteUrl ${siteUrl}`,
 );
