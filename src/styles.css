@@ -48,3 +48,14 @@
     background: linear-gradient(135deg, #dfbe82 0%, #c5a059 50%, #a67c2e 100%);
   }
 }
+
+@keyframes whatsapp-icon-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .whatsapp-icon-pulse {
+    animation: whatsapp-icon-pulse 2.8s ease-in-out infinite;
+  }
+}
