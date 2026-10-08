@@ -15,6 +15,7 @@ const jobs = [
   { name: 'caso-1', widths: [400, 720], ratio: 1, position: 'centre', theme: 'light', icon: 'scale' },
   { name: 'caso-2', widths: [400, 720], ratio: 1, position: 'centre', theme: 'light', icon: 'bolt' },
   { name: 'caso-3', widths: [400, 720], ratio: 1, position: 'centre', theme: 'light', icon: 'verified-fill' },
+  { name: 'ciclo-dieta', widths: [480, 640, 768], ratio: 4 / 5, position: 'centre', theme: 'light', icon: 'scale' },
 ];
 
 const sprite = fs.readFileSync(path.join(root, 'src', 'icons.svg'), 'utf8');

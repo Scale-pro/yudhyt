@@ -18,6 +18,17 @@ const siteUrl = (
   (productionHost ? `https://${productionHost}` : 'http://localhost:4173')
 ).replace(/\/$/, '');
 
+const cyclePhoto = path.join(root, 'assets', 'photos', 'ciclo-dieta.png');
+const cycleImages = [480, 640, 768].flatMap((width) =>
+  ['avif', 'webp'].map((format) => path.join(root, 'public', 'img', `ciclo-dieta-${width}.${format}`)),
+);
+const cycleImagesNeedBuild =
+  fs.existsSync(cyclePhoto) &&
+  cycleImages.some((image) => !fs.existsSync(image) || fs.statSync(cyclePhoto).mtimeMs > fs.statSync(image).mtimeMs);
+if (cycleImagesNeedBuild) {
+  execFileSync(process.execPath, [path.join(root, 'scripts', 'images.mjs')], { cwd: root, stdio: 'inherit' });
+}
+
 fs.rmSync(dist, { recursive: true, force: true });
 fs.mkdirSync(cacheDir, { recursive: true });
 fs.cpSync(path.join(root, 'public'), dist, { recursive: true });
