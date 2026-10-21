@@ -73,7 +73,7 @@ const ogSide = await sharp(heroPhoto ?? (await sharp(placeholder(jobs[0])).png()
 const ogText = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="696" height="630">
   <style>.t{font-family:'Plus Jakarta Sans','Liberation Sans',Arial,sans-serif}</style>
   <text x="64" y="150" class="t" fill="#DFBE82" font-size="22" font-weight="700" letter-spacing="3">CRM-SP 235037 • SAÚDE METABÓLICA</text>
-  <text x="64" y="240" class="t" fill="#ffffff" font-size="56" font-weight="700">Dra. Yudyd Martinez</text>
+  <text x="64" y="240" class="t" fill="#ffffff" font-size="56" font-weight="700">Dra. Yudyht Martinez</text>
   <text x="64" y="320" class="t" fill="#cbdbf5" font-size="30">Emagrecimento clínico e</text>
   <text x="64" y="362" class="t" fill="#cbdbf5" font-size="30">saúde metabólica</text>
   <text x="64" y="470" class="t" fill="#DFBE82" font-size="24" font-weight="600">Online para todo o Brasil</text>

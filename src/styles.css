@@ -48,3 +48,7 @@
     background: linear-gradient(135deg, #dfbe82 0%, #c5a059 50%, #a67c2e 100%);
   }
 }
+
+a[href*="wa.me"] * {
+  pointer-events: none;
+}

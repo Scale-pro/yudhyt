@@ -18,6 +18,12 @@ const siteUrl = (
   (productionHost ? `https://${productionHost}` : 'http://localhost:4173')
 ).replace(/\/$/, '');
 
+const imagesScript = path.join(root, 'scripts', 'images.mjs');
+const ogImage = path.join(root, 'public', 'img', 'og.jpg');
+if (!fs.existsSync(ogImage) || fs.statSync(imagesScript).mtimeMs > fs.statSync(ogImage).mtimeMs) {
+  execFileSync(process.execPath, [imagesScript], { cwd: root, stdio: 'inherit' });
+}
+
 fs.rmSync(dist, { recursive: true, force: true });
 fs.mkdirSync(cacheDir, { recursive: true });
 fs.cpSync(path.join(root, 'public'), dist, { recursive: true });
