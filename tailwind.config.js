@@ -23,6 +23,11 @@ export default {
         'on-surface-variant': '#43474d',
         outline: '#74777e',
         'outline-variant': '#c3c6ce',
+        whatsapp: {
+          DEFAULT: '#25D366',
+          light: '#3DE57C',
+          dark: '#1AA851',
+        },
         gold: {
           DEFAULT: '#C5A059',
           light: '#DFBE82',

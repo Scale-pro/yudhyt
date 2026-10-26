@@ -47,6 +47,11 @@
   .gold-gradient-badge {
     background: linear-gradient(135deg, #dfbe82 0%, #c5a059 50%, #a67c2e 100%);
   }
+  /* CTAs de WhatsApp (exceto primeira dobra): verde da marca + texto escuro (contraste AA) */
+  .btn-whatsapp {
+    @apply border border-whatsapp-dark text-primary hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-whatsapp-dark;
+    background: linear-gradient(135deg, theme('colors.whatsapp.light') 0%, theme('colors.whatsapp.DEFAULT') 55%, theme('colors.whatsapp.dark') 100%);
+  }
 }
 
 a[href*="wa.me"] * {
